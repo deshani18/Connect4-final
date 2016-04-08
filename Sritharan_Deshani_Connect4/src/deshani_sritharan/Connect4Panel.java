@@ -129,16 +129,19 @@ public class Connect4Panel extends JPanel {
 					int currentRow = board.getRowLocation(0);
 					board.update(currentPlayer, currentRow, 0);
 					updateLabel(currentPlayer, currentRow, 0);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 0)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
 					}
 					if (board.draw()) {
 						JOptionPane
 								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -153,23 +156,29 @@ public class Connect4Panel extends JPanel {
 						}
 						changePlayer();
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
 			} else if (event.getSource() == buttons[1]) {
 				if (!board.isColumnFull(1)) {
 					int currentRow = board.getRowLocation(1);
 					board.update(currentPlayer, currentRow, 1);
 					updateLabel(currentPlayer, currentRow, 1);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 1)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -184,23 +193,30 @@ public class Connect4Panel extends JPanel {
 						}
 						changePlayer();
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
+				
 			} else if (event.getSource() == buttons[2]) {
 				if (!board.isColumnFull(2)) {
 					int currentRow = board.getRowLocation(2);
 					board.update(currentPlayer, currentRow, 2);
 					updateLabel(currentPlayer, currentRow, 2);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 2)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -215,24 +231,30 @@ public class Connect4Panel extends JPanel {
 						}
 						changePlayer();
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
+				
 			} else if (event.getSource() == buttons[3]) {
 				if (!board.isColumnFull(3)) {
 					int currentRow = board.getRowLocation(3);
 					board.update(currentPlayer, currentRow, 3);
 					updateLabel(currentPlayer, currentRow, 3);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 3)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -247,24 +269,30 @@ public class Connect4Panel extends JPanel {
 						}
 						changePlayer();
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
+				
 			} else if (event.getSource() == buttons[4]) {
 				if (!board.isColumnFull(4)) {
 					int currentRow = board.getRowLocation(4);
 					board.update(currentPlayer, currentRow, 4);
 					updateLabel(currentPlayer, currentRow, 4);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 4)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -279,23 +307,30 @@ public class Connect4Panel extends JPanel {
 						}
 						changePlayer();
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
+				
 			} else if (event.getSource() == buttons[5]) {
 				if (!board.isColumnFull(5)) {
 					int currentRow = board.getRowLocation(5);
 					board.update(currentPlayer, currentRow, 5);
 					updateLabel(currentPlayer, currentRow, 5);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 5)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -310,23 +345,30 @@ public class Connect4Panel extends JPanel {
 						}
 						changePlayer();
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
+				
 			} else if (event.getSource() == buttons[6]) {
 				if (!board.isColumnFull(6)) {
 					int currentRow = board.getRowLocation(6);
 					board.update(currentPlayer, currentRow, 6);
 					updateLabel(currentPlayer, currentRow, 6);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 6)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -340,25 +382,31 @@ public class Connect4Panel extends JPanel {
 									"It is a tie!!! :)");
 						}
 						changePlayer();
-
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
+				
 			} else if (event.getSource() == buttons[7]) {
 				if (!board.isColumnFull(7)) {
 					int currentRow = board.getRowLocation(7);
 					board.update(currentPlayer, currentRow, 7);
 					updateLabel(currentPlayer, currentRow, 7);
+					boolean stop=false;
 					if (board.checkWinner(currentPlayer, currentRow, 7)) {
 						JOptionPane.showMessageDialog(null, currentPlayer
 								+ " is the winner!!! :)");
+						stop=true;
+					}
+					if (board.draw()) {
+						JOptionPane
+								.showMessageDialog(null, "It is a tie!!! :)");
+						stop=true;
 					}
 					changePlayer();
-					if (ai) {
+					if (ai && !stop) {
 						int col = board.ai();
 						currentRow = board.getRowLocation(col);
 						board.update(currentPlayer, currentRow, col);
@@ -372,15 +420,13 @@ public class Connect4Panel extends JPanel {
 									"It is a tie!!! :)");
 						}
 						changePlayer();
-
 					}
+				}else {
+					JOptionPane.showMessageDialog(null,
+							"Column is full choose another column!!! :)");
 				}
 				board.display();
-				if (board.draw()) {
-					JOptionPane.showMessageDialog(null,
-							"It is a tie!!! :)");
-				}
-
+				
 			}
 		}
 	}
