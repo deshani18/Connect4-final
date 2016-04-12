@@ -85,7 +85,7 @@ public class Connect4Panel extends JPanel {
 	 * @param i
 	 * @param j
 	 */
-	public void updateLabel(CellState currentPlayer, int i, int j) {
+	private void updateLabel(CellState currentPlayer, int i, int j) {
 		if (currentPlayer == CellState.PLAYER1) {
 			labels[i][j].setText("          X");
 			labels[i][j].setOpaque(true);
@@ -103,7 +103,7 @@ public class Connect4Panel extends JPanel {
 	 * changes player back and forth, 
 	 * between player 1 and player 2(which may be the computer in one player mode)
 	 */
-	public void changePlayer() {
+	private void changePlayer() {
 		if (currentPlayer == CellState.PLAYER1) {
 			currentPlayer = CellState.PLAYER2;
 		} else {
