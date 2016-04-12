@@ -282,6 +282,7 @@ public class Board {
 			return true;
 		}else{
 			return false;
+			// test
 		}
 
 	}
